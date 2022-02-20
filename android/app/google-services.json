@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "180438672029",
+    "project_id": "metoon-task",
+    "storage_bucket": "metoon-task.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:180438672029:android:1b357d6320968e572dea74",
+        "android_client_info": {
+          "package_name": "com.esamsmesm.metoon_task"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "180438672029-233tfqs45kbl87vq390gt9rtcsoo14s6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.esamsmesm.metoon_task",
+            "certificate_hash": "e6481efb34e845ea683e9f0d061b2ec405ec7cd7"
+          }
+        },
+        {
+          "client_id": "180438672029-mjubiqcne69bl81d0fq4rfq17j7aabmd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAc46H0s26h63oDktlwAuWfFTDE5LTnWP4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "180438672029-mjubiqcne69bl81d0fq4rfq17j7aabmd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

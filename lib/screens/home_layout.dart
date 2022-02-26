@@ -1,6 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:metoon_task/cubit/auth_cubit.dart';
 import 'package:metoon_task/screens/register_screen.dart';
 import 'package:metoon_task/shared/components/defaults.dart';
 import 'package:metoon_task/shared/constants.dart';
@@ -68,7 +70,15 @@ class HomeLayout extends StatelessWidget {
                           width: 20,
                         ),
                         cubit.isSigned
-                            ? Text('')
+                            ? Expanded(
+                                child: Text(
+                                  AuthCubit.userName ?? '',
+                                  style: TextStyle(
+                                      color: kSecondaryColor,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16),
+                                ),
+                              )
                             : GestureDetector(
                                 onTap: () {
                                   navigateTo(context, RegisterScreen());
@@ -151,8 +161,10 @@ class HomeLayout extends StatelessWidget {
                             ? DrawerTile(
                                 icon: Icons.logout,
                                 color: kPrimaryColor,
-                                onTap: () {
+                                onTap: () async {
                                   navigateAndFinish(context, RegisterScreen());
+                                  await FirebaseAuth.instance.signOut();
+                                  AuthCubit.userName = null;
                                   cubit.isSigned = false;
                                 },
                                 label: 'تسجيل الخروج',

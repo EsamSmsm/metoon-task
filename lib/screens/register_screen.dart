@@ -196,6 +196,7 @@ class SignUpTab extends StatelessWidget {
           CustomTextFormField(
             hintText: 'البريد الالكتروني',
             controller: emailController,
+            keyboardType: TextInputType.emailAddress,
           ),
           SizedBox(
             height: 20,
